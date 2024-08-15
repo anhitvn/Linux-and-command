@@ -6,7 +6,7 @@ Muốn tìm hiểu học bashscript linux thì trước cần nắm rõ một s�
 
 
 
-## 1.Network config: Netplan
+## Network config: Netplan
 
 
 Old config truớc 22.04. Từ version 22.04 trở đi dùng config này sẽ gây lỗi
@@ -22,7 +22,7 @@ Config apply:
 - **P/S:**
   - File `/netplan/00-installer-config.yaml` chỉ nên giới hạn với permision 600
   - Tôi từng gặp lỗi khá khó chịu khi Terraform không tạo được VM do config của netplan không đúng.
-## 2. Config allow user use sudo no passwod:
+## Config allow user use sudo no passwod:
 EX: I have a user is: nexroot
 ```
 sudo visudo
@@ -33,6 +33,40 @@ nexroot ALL=(ALL) NOPASSWD:ALL
 ```
 or set no password for group admin and add this user to admin group.
 
+## Setup docker
+all command setup
+```
+sudo apt update
+```
+```
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+```
+sudo apt update
+```
+```
+apt-cache policy docker-ce
+```
+Output of apt-cache policy docker-ce
+
+```
+docker-ce:
+  Installed: (none)
+  Candidate: 5:20.10.14~3-0~ubuntu-jammy
+  Version table:
+     5:20.10.14~3-0~ubuntu-jammy 500
+        500 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages
+     5:20.10.13~3-0~ubuntu-jammy 500
+        500 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages
+```
+Seutp docker-ce
+```
+sudo apt install docker-ce
+```
 #### Tập hợp cách lệnh sử dụng trong linux và bài viết tìm hiểu cơ bản**
 
 - Link lib command:  https://www.server-world.info/en/
