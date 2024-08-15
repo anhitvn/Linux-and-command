@@ -4,9 +4,10 @@ Ubuntu version 22.04
 
 Muốn tìm hiểu học bashscript linux thì trước cần nắm rõ một số lệnh thường dùng của linux
 
-#### Các basic Config
 
-1. Network config: Netplan
+
+## 1.Network config: Netplan
+
 
 Old config truớc 22.04. Từ version 22.04 trở đi dùng config này sẽ gây lỗi
 ![img](./.img/old-netplan-config.png)
@@ -21,6 +22,16 @@ Config apply:
 - **P/S:**
   - File `/netplan/00-installer-config.yaml` chỉ nên giới hạn với permision 600
   - Tôi từng gặp lỗi khá khó chịu khi Terraform không tạo được VM do config của netplan không đúng.
+## 2. Config allow user use sudo no passwod:
+EX: I have a user is: nexroot
+```
+sudo visudo
+```
+add new permission for this user
+```
+nexroot ALL=(ALL) NOPASSWD:ALL
+```
+or set no password for group admin and add this user to admin group.
 
 #### Tập hợp cách lệnh sử dụng trong linux và bài viết tìm hiểu cơ bản**
 
