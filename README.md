@@ -67,6 +67,17 @@ Seutp docker-ce
 ```
 sudo apt install docker-ce
 ```
+
+Check docker status
+```
+sudo systemctl status docker
+```
+Start and Stop command.
+```
+sudo systemctl start docker
+sudo systemctl stop docker
+```
+
 #### Tập hợp cách lệnh sử dụng trong linux và bài viết tìm hiểu cơ bản**
 
 - Link lib command:  https://www.server-world.info/en/
