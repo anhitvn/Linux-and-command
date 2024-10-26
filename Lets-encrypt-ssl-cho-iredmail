@@ -7,3 +7,7 @@ Tài liệu tham khảo: https://azdigi.com/blog/huong-dan/email-server/cai-dat-
 sudo apt update
 sudo apt install certbot
 ```
+## Step 2: Setup SSL Let's EnCrypt
+```
+certbot certonly --webroot -w /var/www/html -d mail.nexlesoft.io.vn
+```
