@@ -72,3 +72,8 @@ cd iRedMail-1.7.1/
 bash iRedMail.sh
 ```
 Type Enter continue setup
+
+### Step 3: Config setup
+### Step 4: Finish
+
+Web login: https://mail.nexlesoft.io.vn/iredadmin/
