@@ -77,3 +77,5 @@ Type Enter continue setup
 ### Step 4: Finish
 
 Web login: https://mail.nexlesoft.io.vn/iredadmin/
+
+Continue setup Lets encrypt SSL for iRedMail
