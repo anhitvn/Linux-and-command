@@ -51,3 +51,24 @@ Continue update this server and reboot
 ```
 apt-get update && apt-get upgrade -y; reboot
 ```
+## Step 2: Setup iRedMail
+Setup package
+```
+sudo apt-get install -y gzip dialog
+```
+Create new Folder iredmail resource
+```
+cd /
+mkdir iredmail && cd iredmail
+```
+Download  iRedMail version 1.7.1
+```
+wget https://github.com/iredmail/iRedMail/archive/refs/tags/1.7.1.tar.gz
+```
+Continue setup
+```
+tar -zxf 1.7.1.tar.gz
+cd iRedMail-1.7.1/
+bash iRedMail.sh
+```
+Type Enter continue setup
