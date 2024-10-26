@@ -1,0 +1,9 @@
+# Setup Let encrypt SSL for iRedMail
+
+Tài liệu tham khảo: https://azdigi.com/blog/huong-dan/email-server/cai-dat-lets-encrypt-ssl-cho-iredmail/
+
+## Step 1: Update and setup certbot for nginx
+```
+sudo apt update
+sudo apt install certbot
+```
