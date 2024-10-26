@@ -4,7 +4,33 @@ Ubuntu version 22.04
 
 Muốn tìm hiểu học bashscript linux thì trước cần nắm rõ một số lệnh thường dùng của linux
 
-
+## Fix error when apt update
+```
+ apt update
+Get:1 file:/cdrom jammy InRelease
+Ign:1 file:/cdrom jammy InRelease
+Get:2 file:/cdrom jammy Release
+Err:2 file:/cdrom jammy Release
+  File not found - /cdrom/dists/jammy/Release (2: No such file or directory)
+Hit:3 http://vn.archive.ubuntu.com/ubuntu jammy InRelease
+Get:4 http://vn.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://vn.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://vn.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:7 http://vn.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2112 kB]
+Get:8 http://vn.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1133 kB]
+Reading package lists... Done                               
+E: The repository 'file:/cdrom jammy Release' no longer has a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+```
+From terminal you must remove/comment this CD-ROM repository source directly from /etc/apt/sources.list
+```
+ sudo nano /etc/apt/sources.list
+```
+and comment or remove lines that include cdrom. eg:
+```
+deb [check-date=no] file:///cdrom jammy main restricted
+```
 
 ## Network config: Netplan
 
