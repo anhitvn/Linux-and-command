@@ -11,3 +11,14 @@ sudo apt install certbot
 ```
 certbot certonly --webroot -w /var/www/html -d mail.nexlesoft.io.vn
 ```
+## Step 3: Set config let's encrypt iRedMail
+Remove 2 file old key ssl for iRedMail
+```
+rm -f /etc/ssl/private/iRedMail.key
+rm -f /etc/ssl/certs/iRedMail.crt
+```
+and set symbol links
+```
+ln -s /etc/letsencrypt/live/mail.nexlesoft.io.vn/privkey.pem /etc/ssl/private/iRedMail.key
+ln -s /etc/letsencrypt/live/mail.nexlesoft.io.vn/fullchain.pem /etc/ssl/certs/iRedMail.crt
+```
