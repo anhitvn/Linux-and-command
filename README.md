@@ -3,7 +3,25 @@
 Ubuntu version 22.04
 
 Muốn tìm hiểu học bashscript linux thì trước cần nắm rõ một số lệnh thường dùng của linux
-
+## Test Network with iperf3
+Setup on Mac: use homebrew
+```
+brew install iperf3
+Link tham khảo: https://www.server-world.info/en/note?os=Debian_11&p=iperf3 
+```
+on Debian 
+```
+apt -y install iperf3
+```
+---
+Server, run command
+```
+ iperf3 -s
+```
+On client, run test:
+```
+iperf3 -c <Hosts>
+```
 ## Fix error when apt update
 ```
  apt update
