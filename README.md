@@ -1,8 +1,17 @@
-# OS installation and compatibility issues
+# For Ubuntu version 22.04
 
-For **Ubuntu version 22.04**
-
+- Use on Chipset Intel X86
+- Các command/chức năng cơ bản cần nắm (Dù không nhớ hết, tối thiểu cần nắm được tác dụng của nó):
+  + copy with `cp` -> copy có file or folder thì thêm -r
+  + move with `mv` -> Tương tự cp
+  + Search nội dung trong file or folder dùng grep
+  + Có thể search với cách dùng lệnh ngắn gọn bằng các lệnh find or ls khi cần tìm tên file.
+  + Monitoring on Ubuntu thì sử dụng: top, htop, btop
 Muốn tìm hiểu học bashscript linux thì trước cần nắm rõ một số lệnh thường dùng của linux
+  + Xem user nào đang login trên OS hiện tại với: who
+  + Xem đường dẫn logic hiện tại bằng lệnh: pwd
+  + <Conitnue update>
+
 ## Test Network with iperf3
 Setup on Mac: use homebrew
 ```
