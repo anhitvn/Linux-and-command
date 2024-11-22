@@ -1,6 +1,6 @@
-# Linux: Config và Scripts
+# OS installation and compatibility issues
 
-Ubuntu version 22.04
+For **Ubuntu version 22.04**
 
 Muốn tìm hiểu học bashscript linux thì trước cần nắm rõ một số lệnh thường dùng của linux
 ## Test Network with iperf3
