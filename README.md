@@ -10,4 +10,6 @@
    nvm install 14
    nvm use 14
    ```
+   When setup is successful it will look like the picture
    
+   ![img](./.img/2024-11-22_14-29-04.jpg)
